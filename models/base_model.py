@@ -30,9 +30,8 @@ class BaseModel():
 
     def to_dict(self):
         """return all k/v pairs as dict
-            UNFINISHED
-        return self.__dict__
         """
+        self.__class__ = str(type(self).__name__)
         return dict(
             (key, value)
             for (key, value) in self.__dict__.items()
