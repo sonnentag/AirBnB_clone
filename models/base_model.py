@@ -15,8 +15,7 @@ class BaseModel():
         """init"""
 
         self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        self.created_at = self.updated_at = datetime.now().isoformat()
 
     def __str__(self):
         """return object as printable string"""
@@ -26,7 +25,7 @@ class BaseModel():
     def save(self):
         """save"""
 
-        self.updated_at = datetime.now()
+        self.updated_at = datetime.now().isoformat()
 
     def to_dict(self):
         """return all k/v pairs as dict
