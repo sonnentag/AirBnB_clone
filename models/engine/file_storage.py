@@ -21,12 +21,7 @@ class FileStorage():
 
     def save(self):
         """ save """
-        list_objs = dict(self.__objects)
-        list_objs[obj] = dict([obj.to_dict()
-                              for obj in list_objs])
-        with open(self.__file_path,
-                  mode="w", encoding="utf-8") as myFile:
-            json.dump(list_objs, myFile)
+        pass
 
     def reload(self):
         """ load_from_file """
