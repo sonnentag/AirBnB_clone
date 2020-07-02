@@ -22,7 +22,6 @@ class BaseModel():
             for k in kwargs:
                 if k != '__class__':
                     if k in ['created_at', 'updated_at']:
-                        print(kwargs[k])
                         var = datetime.fromisoformat(kwargs[k])
                     else:
                         var = kwargs[k]
