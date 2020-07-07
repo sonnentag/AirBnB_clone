@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ HBNB File Storage Engine """
 import json
-from models.base_model import BaseModel
+import models
 
 
 class FileStorage():
@@ -21,14 +21,23 @@ class FileStorage():
 
     def save(self):
         """ save """
-        pass
+
+        jdict = {}
+        with open(self.__file_path, mode="w", encoding='utf-8') as f:
+            for key, val in self.__objects.items():
+                jdict.update({key: val.to_dict()})
+
+            json.dump(jdict, f)
 
     def reload(self):
         """ load_from_file """
+
         try:
             with open(self.__file_path, mode='r', encoding='utf-8') as jFile:
                 insts = json.load(jFile)
-                for inst in insts:
-                    instances.append(self.to_dict(**inst))
+                for k, v in insts.items():
+                    attr = models.rentalAttrs[v["__class__"]](**v)
+                    self.__objects[k] = attr
+
         except FileNotFoundError:
             pass

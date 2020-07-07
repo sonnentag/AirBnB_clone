@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-""" reviews """
+""" cities """
 from models.base_model import BaseModel
 
 
-class Review(BaseModel):
-    """ reviews """
+class City(BaseModel):
+    """ cities """
+
     state_id = ""
     name = ""
