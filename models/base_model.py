@@ -9,6 +9,7 @@ class BaseModel():
 
     def __class__(self):
         """ needed for todict """
+
         pass
 
     def __init__(self, *args, **kwargs):
@@ -51,3 +52,4 @@ class BaseModel():
             else (key, datetime.isoformat(value))
             for (key, value) in self.__dict__.items()
             )
+

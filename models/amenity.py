@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-""" states """
+""" amenities """
 from models.base_model import BaseModel
 
 
-class City(BaseModel):
-    """ states """
-    state_id = ""
+class Amenity(BaseModel):
+    """ amenities """
+
     name = ""
