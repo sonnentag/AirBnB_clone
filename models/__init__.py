@@ -11,12 +11,12 @@ from models.review import Review
 from models.amenity import Amenity
 
 rentalAttrs = {"BaseModel": BaseModel,
-              "User": User,
-              "City": City,
-              "State": State,
-              "Place": Place,
-              "Amenity": Amenity,
-              "Review": Review}
+               "User": User,
+               "City": City,
+               "State": State,
+               "Place": Place,
+               "Amenity": Amenity,
+               "Review": Review}
 
 storage = FileStorage()
 storage.reload()
