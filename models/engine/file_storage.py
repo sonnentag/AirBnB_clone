@@ -20,14 +20,20 @@ class FileStorage():
                        str(obj.__dict__['id'])] = obj
 
     def save(self):
-        """ save """
-
+        """ save 
         jdict = {}
         with open(self.__file_path, mode="w", encoding='utf-8') as f:
             for key, val in self.__objects.items():
                 jdict.update({key: val.to_dict()})
 
             json.dump(jdict, f)
+"""
+        e = dict(self.__objects)
+        for key in list(e.keys()):
+            e[key] = dict(e[key].to_dict())
+        d = json.dumps(e)
+        with open(self.__file_path, 'w', encoding='utf-8') as f:
+            f.write(d)
 
     def reload(self):
         """ load_from_file """
