@@ -64,6 +64,14 @@ h4 {
     height: max-content;
 }
 
+.locations {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 25%;
+    margin: auto;
+}
+
 div.locations:hover .popover {
     display: inline-block;    
 }
@@ -74,7 +82,7 @@ div.locations:hover .popover {
     position: relative;
     height: 100%;
     width: 25%;
-    margin: 0% 60px 0% 2.6%;
+    margin: auto;
 }
 
 div.amenities:hover .popover {
