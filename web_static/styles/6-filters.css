@@ -52,7 +52,7 @@ h4 {
 .popover {
     display: none;
     position: absolute;
-    margin: -3.3% 0% 0% -12.5%;
+    margin: -3.5% -7% 0% -12.5%;
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 16px;
@@ -61,7 +61,6 @@ h4 {
     color: #000000;
     border: #DDDDDD solid 1px;
     width: 96%;
-    height: max-content;
 }
 
 .locations {
@@ -69,7 +68,7 @@ h4 {
     position: relative;
     height: 100%;
     width: 25%;
-    margin: auto;
+    margin: -4px 0 0 -2px;
 }
 
 div.locations:hover .popover {
@@ -82,7 +81,7 @@ div.locations:hover .popover {
     position: relative;
     height: 100%;
     width: 25%;
-    margin: auto;
+    margin: 4px auto;
 }
 
 div.amenities:hover .popover {
