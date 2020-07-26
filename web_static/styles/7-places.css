@@ -1,13 +1,21 @@
 section .places {
-    width: 100%;
     display: flex;
+    width: 100%;
+    padding-left: 50%;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 section .places h1{
     font-size: 30px;
-    width: 100%;    
+    margin-bottom: 20px;
+}
+
+section .places h2 {
+	font-size: 30px;
 }
 
 section .places article {    
@@ -20,5 +28,13 @@ section .places article {
 
 .place{
     font-size: 30px;
-    text-align: center;
+    width: 390px;
+    padding: 20px;
+    margin: 20px;
+    border: solid #FF5A5F 1px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
